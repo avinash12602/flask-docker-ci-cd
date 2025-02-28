@@ -7,6 +7,8 @@ WORKDIR /app
 # Copy the rest of the application files
 COPY . .
 
+RUN pip install --no-cache-dir flask gunicorn
+
 # Expose port 5000
 EXPOSE 5000
 
