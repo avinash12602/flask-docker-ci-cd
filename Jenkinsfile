@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/avinash12602/flask-docker-ci-cd.git'
+                git branch: 'main', url: 'https://github.com/avinash12602/flask-docker-ci-cd.git'
             }
         }
 
