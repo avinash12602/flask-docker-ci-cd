@@ -25,5 +25,11 @@ pipeline {
                 sh 'docker run -d -p 5000:5000 --name flask-app flask-app'
             }
         }
+        stage('Health Check') {
+            steps {
+                sh 'sleep 5 && curl -f http://localhost:5000 || exit 1'
+    }
+}
+
     }
 }
